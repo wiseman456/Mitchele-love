@@ -1,0 +1,133 @@
+<!DOCTYPE html><html>
+<head>
+<title>For Joan ❤️</title><style>
+
+body {
+    margin: 0;
+    font-family: Arial;
+    text-align: center;
+    background: pink;
+}
+
+#page1 {
+    padding-top: 150px;
+}
+
+button {
+    font-size: 25px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#yes {
+    background: red;
+    color: white;
+}
+
+#no {
+    background: gray;
+    color: white;
+}
+
+#page2 {
+    display: none;
+    height: 100vh;
+    background: linear-gradient(pink, hotpink, purple);
+    color: white;
+    padding-top: 100px;
+}
+
+#page2 h1 {
+    font-size: 70px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+    from {
+        bottom: -50px;
+    }
+
+    to {
+        bottom: 110%;
+    }
+}
+
+</style></head><body><div id="page1"><h1>Hey Joan ❤️</h1>
+
+<h2>Will you be my girlfriend? 🥺❤️</h2>
+
+<button id="yes" onclick="YES()">
+    YES ❤️
+</button>
+
+<button id="no" onclick="NO()">
+    NO 😭
+</button>
+
+</div><div id="page2"><div>🌹 🌹 🧸 ❤️ 🧸 🌹 🌹</div>
+
+<h1>She Said YES! ❤️</h1>
+
+<h2>💕 I knew you would! 💕</h2>
+
+<h2>
+    I love you soo much Joan ❤️
+</h2>
+
+<h2>
+    From Wiseman, your baby 🥰❤️
+</h2>
+
+<div>🌹 🧸 ❤️ 🧸 🌹</div>
+
+</div><script>
+
+function YES() {
+
+    document.getElementById("page1").style.display = "none";
+
+    document.getElementById("page2").style.display = "block";
+
+    for (var i = 0; i < 30; i++) {
+
+        var heart = document.createElement("div");
+
+        heart.innerHTML = "❤️";
+
+        heart.className = "heart";
+
+        heart.style.left = Math.random() * 100 + "%";
+
+        heart.style.fontSize =
+            (20 + Math.random() * 30) + "px";
+
+        heart.style.animationDelay =
+            Math.random() * 5 + "s";
+
+        document.body.appendChild(heart);
+    }
+}
+
+
+function NO() {
+
+    var button = document.getElementById("no");
+
+    button.style.position = "fixed";
+
+    button.style.left =
+        Math.random() * 80 + "%";
+
+    button.style.top =
+        Math.random() * 80 + "%";
+}
+
+</script></body>
+</html>
